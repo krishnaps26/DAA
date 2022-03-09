@@ -39,7 +39,7 @@ int main()
     }
     int flag2=1;
 if(flag){
-    for(int k=j;k<(j+m);k++)
+    for(int k=j+1;k<(j+m);k++)
     {
         if(arr[k]==key)
         {
