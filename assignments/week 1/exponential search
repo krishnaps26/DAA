@@ -21,7 +21,7 @@
      int range=pow(2,k);
      int j;
      int flag=1,flag3=1;
-     while(flag&&flag3)
+     while(flag&&flag3){
      for(j=range;j<=range;j++)
      {   range=pow(2,k);
          if(arr[range]==key)
@@ -44,7 +44,7 @@
          }
 
      }
-
+}
      if(flag)
      {
      for(int p=j;p<range;p++)
