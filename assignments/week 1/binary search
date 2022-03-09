@@ -3,6 +3,7 @@
 
 void binary_search(int arr[],int n,int key)
 {int c=0;
+int flag=1;
     int s=0,l=n;
     int i,mid=0;
 
@@ -13,6 +14,7 @@ void binary_search(int arr[],int n,int key)
         {
             printf("key found at %d\n",mid);
             printf("comparisons : %d\n",c);
+            flag=0;
             break;
 
         }
@@ -28,7 +30,8 @@ void binary_search(int arr[],int n,int key)
         }
 
     }
-    printf("key not found \n");
+    if(flag)
+    {printf("key not found \n");}
 
 }
 
