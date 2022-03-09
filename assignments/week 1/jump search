@@ -19,10 +19,12 @@ int main()
     scanf("%d",&key);
     m= sqrt(n);
     int j=0;
+    int flag=1;
    while(j<n)
     {
         if(arr[j]==key)
             {printf("key found at %d\n",j);
+            flag=0;
             break;}
         else if(key>arr[j])
         {
@@ -33,18 +35,25 @@ int main()
             j=j-m;
             break;
         }
-        else
-            printf("key not found\n");
-    }
 
+    }
+    int flag2=1;
+if(flag){
     for(int k=j;k<(j+m);k++)
     {
         if(arr[k]==key)
         {
             printf("key found at %d\n",k);
+            flag2=0;
         }
 
+    }}
+    if(flag2)
+    {
+
+        printf("key not found");
     }
+
     return 0;
 
 }
