@@ -4,6 +4,7 @@
  int main()
  {
      int n;
+       int flag2=1;
      printf("enter the number of elements\n");
      scanf("%d",&n);
      int arr[n];
@@ -19,28 +20,31 @@
      int k=0;
      int range=pow(2,k);
      int j;
-     int flag=1;
-     for(j=0;j<=range;j++)
+     int flag=1,flag3=1;
+     while(flag&&flag3)
+     for(j=range;j<=range;j++)
      {   range=pow(2,k);
-         if(arr[j]==key)
+         if(arr[range]==key)
          {
-             printf("key found at %d \n",j);
+             printf("key found at %d \n",range);
              flag=0;
+             flag2=0;
              break;
 
          }
-         else if(arr[j]<key)
+         else if(arr[range]<key)
          {
              k++;
          }
-         else if(arr[j]>key)
+         else if(arr[range]>key)
          {
              j=range/2;
+             flag3=0;
              break;
          }
 
      }
-     int flag2=1;
+
      if(flag)
      {
      for(int p=j;p<range;p++)
