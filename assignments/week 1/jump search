@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+int main()
+{
+    int n;
+    printf("enter the number of elements :\n");
+    scanf("%d",&n);
+    int arr[n];
+    printf("enter elements in the array \n");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    int m;
+    int key;
+    printf("enter the key:\n");
+    scanf("%d",&key);
+    m= sqrt(n);
+    int j=0;
+   while(j<n)
+    {
+        if(arr[j]==key)
+            {printf("key found at %d\n",j);
+            break;}
+        else if(key>arr[j])
+        {
+            j=j+m;
+        }
+        else if(key<arr[j])
+        {
+            j=j-m;
+            break;
+        }
+        else
+            printf("key not found\n");
+    }
+
+    for(int k=j;k<(j+m);k++)
+    {
+        if(arr[k]==key)
+        {
+            printf("key found at %d\n",k);
+        }
+
+    }
+    return 0;
+
+}
